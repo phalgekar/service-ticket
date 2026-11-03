@@ -1,0 +1,107 @@
+name: OpenShift Onboarding for Namespace
+description: Request a new OpenShift namespace onboarding
+title: "[OpenShift Onboarding for Namespace]: "
+labels:
+  - Service Request
+  - openshift
+body:
+  - type: markdown
+    attributes:
+      value: |
+        @ocp/first-level-support
+        
+        New issue was created.
+
+  - type: dropdown
+    id: related_to
+    attributes:
+      label: Related to
+      description: In which location need you new OpenShift Namespace.
+      options:
+        - ERLS-P
+        - ERLS-Q
+        - ERLS-D
+        - ERLS-T
+    validations:
+      required: true
+
+  - type: input
+    id: namespace_name
+    attributes:
+      label: Namespace Name
+      description: You cannot change the name of your namespace after it has been created.
+      placeholder: my-namespace
+    validations:
+      required: true
+
+  - type: input
+    id: service_now_id
+    attributes:
+      label: ServiceNow ID
+      description: The ServiceNow former UPMX ID of your Application/Service.
+      placeholder: APM123456
+    validations:
+      required: true
+
+  - type: input
+    id: namespace_manager
+    attributes:
+      label: Namespace Manager
+      description: Namespace Manager can manage permission groups and order resource change requests.
+      placeholder: GID
+    validations:
+      required: true
+
+  - type: input
+    id: namespace_manager_deputy
+    attributes:
+      label: Namespace Manager Deputy
+      description: Namespace Manager Deputy can manage permission groups and order resource change requests.
+      placeholder: GID
+    validations:
+      required: true
+
+  - type: input
+    id: namespace_vlan
+    attributes:
+      label: Namespace VLAN
+      description: Add VLAN ID for network connection or use additional information field when you do not know your VLAN ID.
+      placeholder: "1234"
+    validations:
+      required: false
+
+  - type: input
+    id: cpu_requests
+    attributes:
+      label: CPU requests
+      description: Number of CPU cores.
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: input
+    id: ram_requests
+    attributes:
+      label: RAM requests
+      description: Memory in GiB (Gibibyte).
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: input
+    id: storage_requests
+    attributes:
+      label: Storage requests
+      description: Storage in GiB (Gibibyte).
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_information
+    attributes:
+      label: Additional information
+      description: Please describe additional requests as close as possible.
+      placeholder: Provide any additional information required for namespace creation.
+    validations:
+      required: true
