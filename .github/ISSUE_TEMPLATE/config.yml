@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: OpenShift Support Documentation
+    url: https://your-company-wiki-url
+    about: Please review the onboarding documentation before raising a request.
